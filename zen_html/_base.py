@@ -21,10 +21,12 @@ import html
 import logging
 import re
 import warnings
+from collections.abc import Callable, Iterable
 from datetime import date, datetime, time
-from typing import Callable, ClassVar, Iterable, ParamSpec, TypedDict, TypeVar, cast
+from typing import ClassVar, ParamSpec, TypedDict, TypeVar, cast
 
 from ._tag_spec import normalized_tag_spec
+
 
 VOID_TAGS: set[str] = {
     "area",
