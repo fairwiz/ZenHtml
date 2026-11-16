@@ -308,9 +308,7 @@ class _HBase:
 
         lines.append(f"{pad2}'children': [")
         for c in self._children:
-            if isinstance(c, _HBase.RAW_STR):
-                lines.append(f"{pad3}  {str(c)!r},")
-            elif isinstance(c, str):
+            if isinstance(c, (_HBase.RAW_STR, str)):
                 lines.append(f"{pad3}  {_escape_text(str(c))!r},")
             else:
                 lines.append(c._pretty_dict(indent + 2))

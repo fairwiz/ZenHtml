@@ -1,6 +1,12 @@
 [build-system]
 requires = ["setuptools>=68", "wheel"]
 
+[tool.setuptools.packages.find]
+include = ["zen_html*"]
+
+[tool.setuptools.package-data]
+zen_html = ["py.typed"]
+
 [project]
 name = "zenhtml"
 version = "0.1.5"

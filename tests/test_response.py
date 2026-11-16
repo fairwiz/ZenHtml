@@ -4,11 +4,10 @@
 # mypy: disable-error-code=unused-ignore
 
 import pytest
-
 from starlette.testclient import TestClient
 
-from zen_html.h import H
 from examples.sample import HResponse, HtmlDocument
+from zen_html.h import H
 
 
 pytest.importorskip("starlette.responses")
